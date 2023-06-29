@@ -10,10 +10,11 @@ E) bigint (ES 2020) - Literal or BigInt Function
 F) null
 G) Symbol (ES6 Rare to Use)
 
-
 Mutable (Reference)
-a) Array [] Specific
-b) object {} Generic
+a) Array [] Specific for, for of , push , pop, splice, shift, unshift , length
+b) object {} Generic for in , [] vs .
+Spread …
+C) function
 
 [] vs {}
 
