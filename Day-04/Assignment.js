@@ -81,9 +81,7 @@ function chkTriangle() {
         }
     }
 
-    var ans = Triangle(a,b,c,isEqui);
-
-    console.log(ans);
+    Triangle(a,b,c,isEqui);
 
 }
 
