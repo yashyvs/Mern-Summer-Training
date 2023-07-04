@@ -10,14 +10,16 @@
       integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM"
       crossorigin="anonymous"
     />
-    <script src="./scripts/controllers/notes-controller.js"></script>
+    <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
     <div class="container">
-      <h1 class="alert alert-danger text-center">Notes Taking App</h1>
+      <h1 id="header" class="alert alert-danger text-center">
+        Notes Taking App
+      </h1>
 
       <div class="form-group">
-        <label>ID :</label>
+        <label class="form-label">ID :</label>
         <input
           id="id"
           class="form-control"
@@ -27,7 +29,7 @@
       </div>
 
       <div class="form-group">
-        <label>Title :</label>
+        <label class="form-label">Title :</label>
         <input
           id="title"
           class="form-control"
@@ -37,7 +39,7 @@
       </div>
 
       <div class="form-group">
-        <label>Description :</label>
+        <label class="form-label">Description :</label>
         <textarea
           id="desc"
           class="form-control"
@@ -48,26 +50,50 @@
       </div>
 
       <div class="form-group">
-        <label>Completion Date :</label>
+        <label class="form-label">Completion Date :</label>
         <input id="cdate" class="form-control" type="date" />
       </div>
 
       <div class="form-group">
-        <label>Importance :</label>
+        <label class="form-label">Importance :</label>
         <input id="importance" class="form-control" type="color" />
       </div>
 
-      <div>
-        <button class="btn btn-primary" onclick="addNotes()">Add</button>
-        <button class="btn btn-danger">Delete</button>
-        <button class="btn btn-info">Search</button>
-        <button class="btn btn-success">Sort</button>
-        <button class="btn btn-warning">Update</button>
-        <button class="btn btn-success">Save</button>
-        <button class="btn btn-secondary">Load</button>
-        <button class="btn btn-danger">Clear All</button>
-        <button class="btn btn-success">Save To Server</button>
-        <button class="btn btn-secondary">Load From Server</button>
+      <div class="btn-container">
+        <button
+          class="btn"
+          onclick="addNotes()"
+        >
+          Add
+        </button>
+        <button
+          class="btn"
+          onclick="deleteNotes()"
+        >
+          Delete
+        </button>
+        <button class="btn">Search</button>
+        <button
+          class="btn"
+          onclick="sortNotes()"
+        >
+          Sort
+        </button>
+        <button class="btn">Update</button>
+        <button class="btn">Save</button>
+        <button class="btn">Load</button>
+        <button
+          class="btn"
+          onclick="clearNotes()"
+        >
+          Clear All
+        </button>
+        <button class="btn">
+          Save To Server
+        </button>
+        <button class="btn">
+          Load From Server
+        </button>
       </div>
 
       <div>
@@ -93,6 +119,7 @@
       <br />
       <input type="button" value="Load from Local" />
       <input type="button" value="Save to Local" /> -->
+    <script src="./scripts/controllers/notes-controller.js"></script>
   </body>
 </html>
 
